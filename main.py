@@ -59,7 +59,7 @@ pipe1 = make_extra_rect(750, 500, 50, 500)
 pipe2 = make_extra_rect(750, 0, 50, random.randint(200, 400))  # top pipe
 laser_rect = make_extra_rect(100, 200, player_width - windowWidth, 50)
 laser_visible = False
-penguin_rect = make_extra_rect(pipe1.x + 150, random.randint(100, windowHeight), 48, 48)
+penguin_rect = make_extra_rect(pipe1.x + 150, random.randint(200, windowHeight - 100), 48, 48)
 penguin_visible = True
 def reset_game():
     global player_rect, player_y_velocity, score, game_started, game_over, pipe1, bg_image, penguin_rect, penguin_visible
@@ -127,7 +127,7 @@ async def main():
             if pipe1.right < 0:
                 new_height = random.randint(300, 450) 
                 pipe1 = make_extra_rect(windowWidth, new_height, 50, 500)
-                penguin_rect.y = random.randint(100, windowHeight - 200)
+                penguin_rect.y = random.randint(200, windowHeight - 300)
                 penguin_visible = True
             if pipe2.right < 0:
                 pipe2 = make_extra_rect(windowWidth, 0, 50, random.randint(150, 200))
