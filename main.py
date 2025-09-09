@@ -88,7 +88,7 @@ async def main():
                 running = False
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_x:  # quit with X
-                    running = False
+                    running = True # removed quitting with x cause it doesn't really matter on web
                 elif event.key == pygame.K_r:  # restart with R
                     reset_game()
                     game_started = False
